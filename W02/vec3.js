@@ -49,7 +49,7 @@ Vec3.prototype.mid = function()
 
 Vec3.prototype.vec =function(v)
 {
-    return new Vec3(this.x - v.x, this.y - v.y, this.z - v.z);
+    return new Vec3(v.x - this.x, v.y - this.y, v.z - this.z);
 }
 
 Vec3.prototype.cross = function( v )

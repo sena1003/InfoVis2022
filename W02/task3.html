@@ -10,15 +10,11 @@
                  var C = new Vec3(6, 7, 8);
                  var AB = A.vec(B);
                  var AC = A.vec(C);
-                 document.write("AB :(" + AB.x + "," + AB.y + "," + AB.z +")<br>");
-                 document.write("AC :(" + AC.x + "," + AC.y + "," + AC.z +")<br>");
-                 var crossProduct = AB.cross(AC);
-                 document.write("外積ベクトル :(" + crossProduct.x + "," + crossProduct.y + "," + crossProduct.z +")<br>");
                  var area = 0.5 * crossProduct.length();
                  document.write("点A :(" + A.x + "," + A.y + "," + A.z +")<br>");
                  document.write("点B :(" + B.x + "," + B.y + "," + B.z +")<br>");
                  document.write("点C :(" + C.x + "," + C.y + "," + C.z +")<br>");
-                 document.write("面積　:" + area + "<br>");
+                 document.write("三角形ABCの面積 :" + area + "<br>");
             </script>
        </body>
 </html>
