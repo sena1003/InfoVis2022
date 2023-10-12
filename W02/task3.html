@@ -11,10 +11,11 @@
                  var AB = A.vec(B);
                  var AC = A.vec(C);
                  var crossProduct = AB.cross(AC);
+                 document.write("外積 :" + crossProduct + "<br>");
                  var area = 0.5 * crossProduct.length();
-                 document.write("点A :(" + A.x + "," + A.y + "," + A.z +"<br>");
-                 document.write("点B :(" + B.x + "," + B.y + "," + B.z +"<br>");
-                 document.write("点C :(" + C.x + "," + C.y + "," + C.z +"<br>");
+                 document.write("点A :(" + A.x + "," + A.y + "," + A.z +")<br>");
+                 document.write("点B :(" + B.x + "," + B.y + "," + B.z +")<br>");
+                 document.write("点C :(" + C.x + "," + C.y + "," + C.z +")<br>");
                  document.write("面積　:" + area + "<br>");
             </script>
        </body>
