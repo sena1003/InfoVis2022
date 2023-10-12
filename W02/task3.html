@@ -10,6 +10,8 @@
                  var C = new Vec3(6, 7, 8);
                  var AB = A.vec(B);
                  var AC = A.vec(C);
+                 document.write("AB :(" + AB.x + "," + AB.y + "," + AB.z +")<br>");
+                 document.write("AC :(" + AC.x + "," + AC.y + "," + AC.z +")<br>");
                  var crossProduct = AB.cross(AC);
                  document.write("外積ベクトル :(" + crossProduct.x + "," + crossProduct.y + "," + crossProduct.z +")<br>");
                  var area = 0.5 * crossProduct.length();
