@@ -12,10 +12,10 @@
 		.data(data)
 	        .enter()
 	        .append("rect")
-	        .attr("x", padding)
-	    	.attr("y", function(d,i){ return padding + i * ( height + padding ); })
+	        .attr("x", function(d){ return d.padding; })
+	    	.attr("y", function(d,i){ return d.padding + i * ( d.height + d.padding ); })
 	    	.attr("width", function(d){ return d.width; })
-	    	.attr("height", height)
+	    	.attr("height", function(d){return d.height; })
 	 };
 	</script>
     </body>
