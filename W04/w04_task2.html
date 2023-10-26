@@ -23,7 +23,7 @@
 			.append("text")
 			.text(function(d){return "Label"+d.label;})
 			.attr("x", function (d) { return d.x - 40; }) // ラベルを矩形の左に配置
-        	.attr("y", function (d) { return d.y; }) // ラベルの位置を調整
+        	.attr("y", function (d) { return d.y + 10; }) // ラベルの位置を調整
 			.style("font-size", "10px")
 
 
