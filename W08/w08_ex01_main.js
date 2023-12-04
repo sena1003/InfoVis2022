@@ -34,7 +34,6 @@ const yscale = d3.scaleBand()
 const xaxis = d3.axisBottom( xscale )
       .ticks(5)
       .tickSizeOuter(0);
-
 const yaxis = d3.axisLeft( yscale )
       .tickSizeOuter(0);
 
