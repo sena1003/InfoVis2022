@@ -65,6 +65,7 @@ var config = {
             .on('click', () => {
                 self.data.reverse();
                 self.update();
+                self.transition().duration(1000)
             });
 
             d3.select('#sortAscending')
