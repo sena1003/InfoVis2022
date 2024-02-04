@@ -1,0 +1,51 @@
+<html>
+    <head>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
+
+        <title>W12: Example 03</title>
+	<style>
+	 body {
+	     font-family: system-ui;
+	 }
+	 .container {
+	     display: flex;
+	 }
+	 .bar.active {
+	     stroke: #000;
+	 }
+	 #tooltip {
+	     position: absolute;
+	     opacity: 0;
+	     background: #fff;
+	     border: 1px solid #ddd;
+	     font-size: 12px;
+	     font-weight: 600;
+	     padding: 2px 8px;
+	 }
+	 .tooltip-label {
+	     font-weight: 500;
+	     font-size: 11px;
+	     color: #888;
+	 }
+	</style>
+    </head>
+    <body>
+	<h2>Iris Flower Dataset</h2>
+	<div id="tooltip"></div>
+	<div class="container">
+		<div><svg id="drawing_region_dimensionality"></svg></div>
+	    <div><svg id="drawing_region_scatterplot"></svg></div>
+	    <div><svg id="drawing_region_barchart"></svg></div>
+		
+
+	</div>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="w12_ex03_ScatterPlot.js"></script>
+	<script src="w12_ex03_BarChart.js"></script>
+<!-- HTMLのhead部分に以下のスクリプトを追加 -->
+
+
+	<script src="w12_ex03_DRplot.js"></script>
+	<script src="w12_ex03_main3.js"></script>
+    </body>
+</html>
