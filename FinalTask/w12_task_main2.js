@@ -39,7 +39,7 @@ d3.csv("https://sena1003.github.io/InfoVis2022/FinalTask/mds_wine_data.csv")
 
     
 // ワインのqualityに関するデータの読み込み
-d3.csv("https://sena1003.github.io/InfoVis2022/FianlTask/redwinequality.csv")
+d3.csv("https://sena1003.github.io/InfoVis2022/FinalTask/redwinequality.csv")
     .then(data => {
         // CorrelationMatrixクラスのインスタンスを作成
         correlationMatrix = new CorrelationMatrix({
