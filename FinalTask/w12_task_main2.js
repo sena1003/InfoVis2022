@@ -4,12 +4,12 @@ let bar_chart;
 let correlationMatrix
 let filter = [];
 
-d3.csv("https://sena1003.github.io/InfoVis2022/W12/compressed_wine_data.csv")
+d3.csv("https://sena1003.github.io/InfoVis2022/FinalTask/mds_wine_data.csv")
     .then( data => {
         input_data = data;
         input_data.forEach( d => {
-            d.PC1 = +d.PC1;
-            d.PC2 = +d.PC2;
+            d.MDS1 = +d.MDS1;
+            d.MDS2 = +d.MDS2;
         });
 
         const color_scale = d3.scaleOrdinal( d3.schemeCategory10 );
@@ -20,8 +20,8 @@ d3.csv("https://sena1003.github.io/InfoVis2022/W12/compressed_wine_data.csv")
             width: 256,
             height: 256,
             margin: {top:10, right:10, bottom:50, left:50},
-            xlabel: 'Sepal length [cm]',
-            ylabel: 'Sepal width [cm]',
+            xlabel: 'MDS1',
+            ylabel: 'MDS2',
             cscale: color_scale
         }, input_data );
         scatter_plot.update();
@@ -31,7 +31,7 @@ d3.csv("https://sena1003.github.io/InfoVis2022/W12/compressed_wine_data.csv")
             width: 256,
             height: 256,
             margin: {top:10, right:10, bottom:50, left:50},
-            xlabel: 'Quality',
+            xlabel: 'Wine_Quality',
             cscale: color_scale
         }, input_data );
         bar_chart.update();
@@ -39,7 +39,7 @@ d3.csv("https://sena1003.github.io/InfoVis2022/W12/compressed_wine_data.csv")
 
     
 // ワインのqualityに関するデータの読み込み
-d3.csv("https://sena1003.github.io/InfoVis2022/W12/redwinequality.csv")
+d3.csv("https://sena1003.github.io/InfoVis2022/FianlTask/redwinequality.csv")
     .then(data => {
         // CorrelationMatrixクラスのインスタンスを作成
         correlationMatrix = new CorrelationMatrix({
