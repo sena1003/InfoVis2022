@@ -2,8 +2,8 @@ class PieChart {
     constructor(config, data) {
         this.config = {
             parent: config.parent,
-            width: config.width || 256,
-            height: config.height || 256,
+            width: config.width || 400,
+            height: config.height || 400,
             margin: config.margin || { top: 10, right: 10, bottom: 10, left: 10 },
             title: config.title || 'Pie Chart',
             cscale: config.cscale
@@ -38,7 +38,13 @@ class PieChart {
         let pie = d3.pie()
             .value(d => d.value);
 
-        let arcs = pie(self.data);
+        // データをkeyとvalueの形に変換
+        const pieData = d3.nest()
+            .key(d => d.quality)
+            .rollup(values => values.length)
+            .entries(self.data);
+
+        let arcs = pie(pieData);
 
         let arcGenerator = d3.arc()
             .innerRadius(0)

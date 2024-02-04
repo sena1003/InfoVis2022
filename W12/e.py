@@ -1,18 +1,24 @@
-import csv
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-# 元のCSVファイル名と新しいCSVファイル名
-input_file = 'winered.csv'
-output_file = 'redwinequality.csv'
+# 圧縮したデータを読み込む
+compressed_data = pd.read_csv('compressed_wine_data.csv')
 
-# CSVファイルを読み込み、新しい区切り文字で書き出す
-with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', encoding='utf-8', newline='') as outfile:
-    # CSVリーダーを作成し、区切り文字を';'から','に変更
-    reader = csv.reader(infile, delimiter=';')
-    # CSVライターを作成し、区切り文字を','に指定
-    writer = csv.writer(outfile, delimiter=',')
-    
-    # 行ごとに読み込み、新しいファイルに書き込む
-    for row in reader:
-        writer.writerow(row)
+# 散布図をプロット
+plt.figure(figsize=(10, 8))
+sns.scatterplot(x='PC1', y='PC2', hue='quality', data=compressed_data, palette='viridis', s=60)
 
-print(f'区切り文字を変更しました。新しいファイル: {output_file}')
+# 軸ラベルとタイトルを追加
+plt.xlabel('Principal Component 1')
+plt.ylabel('Principal Component 2')
+plt.title('Wine Quality - PCA Scatter Plot')
+
+# 色の説明を追加
+plt.legend(title='Quality', loc='upper right')
+
+# グリッドを表示
+plt.grid(True)
+
+# プロットを表示
+plt.show()

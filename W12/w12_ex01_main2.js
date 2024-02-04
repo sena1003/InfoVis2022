@@ -1,4 +1,4 @@
-d3.csv("sena1003.github.io/InfoVis2022/W12/redwinequality.csv")
+d3.csv("https://sena1003.github.io/InfoVis2022/W12/redwinequality.csv")
     .then( data => {
         data.forEach( d => {
             d.fixed_acidity = +d.fixed_acidity;
