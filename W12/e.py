@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # 圧縮したデータを読み込む
-compressed_data = pd.read_csv('compressed_wine_data.csv')
+compressed_data = pd.read_csv('mds_wine_data.csv')
 
 # 散布図をプロット
 plt.figure(figsize=(10, 8))
-sns.scatterplot(x='PC1', y='PC2', hue='quality', data=compressed_data, palette='viridis', s=60)
+sns.scatterplot(x='MDS1', y='MDS2', hue='quality', data=compressed_data, palette='viridis', s=60)
 
 # 軸ラベルとタイトルを追加
 plt.xlabel('Principal Component 1')
